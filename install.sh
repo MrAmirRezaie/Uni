@@ -57,8 +57,8 @@ check_gpp_installed
 repo_url="https://github.com/MrAmirRezaie/Uni.git"
 git clone "$repo_url" repo && cd repo || { echo "Failed to navigate to repository directory"; exit 1; }
 
-files=(*)
-echo "Files in the repository:"
+files=(*.cpp)
+echo "C++ files in the repository:"
 for i in "${!files[@]}"; do
     echo "$i) ${files[$i]}"
 done
