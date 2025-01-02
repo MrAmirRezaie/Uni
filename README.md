@@ -1,5 +1,5 @@
 Basic description:
-These exercises are for the advanced programming course of Professor Shahrokhzadeh.
+These exercises are for the advanced programming course of Dr.Shahrokhzadeh.
 In doing this exercise, I tried to replace the file with a script file that I wrote in bash language so that others can receive and read the files more easily.
 
 Enter the program directory with the following command:
