@@ -31,10 +31,13 @@ double Saving::rate = 0;
 int main() 
 {
     double bal1, bal2, rate;
+
     cout << "Enter balance for saving account 1: ";
     cin >> bal1;
+
     cout << "Enter balance for saving account 2: ";
     cin >> bal2;
+
     cout << "Enter monthly interest rate: ";
     cin >> rate;
 

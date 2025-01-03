@@ -61,14 +61,18 @@ public:
 int main() 
 {
     double x, y, r;
+
     cout << "Enter x and y for the circle center: ";
     cin >> x >> y;
+
     cout << "Enter radius of the circle: ";
     cin >> r;
 
     Circle c(x, y, r);
     c.Print();
+
     cout << "Area: " << c.getArea() << endl;
+
     cout << "Circumference: " << c.getCircumference() << endl;
 
     return 0;

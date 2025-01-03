@@ -36,6 +36,7 @@ int main() {
     double x1, y1, x2, y2;
     cout << "Enter x and y for the first point: ";
     cin >> x1 >> y1;
+
     cout << "Enter x and y for the second point: ";
     cin >> x2 >> y2;
 

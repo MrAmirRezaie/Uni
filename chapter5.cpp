@@ -42,8 +42,10 @@ public:
 int main() 
 {
     double x1, y1, z1, x2, y2, z2;
+
     cout << "Enter x, y, z for the first triple: ";
     cin >> x1 >> y1 >> z1;
+
     cout << "Enter x, y, z for the second triple: ";
     cin >> x2 >> y2 >> z2;
 
