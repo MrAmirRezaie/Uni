@@ -57,7 +57,7 @@ compile_and_run()
 check_gpp_installed
 
 repo_url="https://github.com/MrAmirRezaie/Uni.git"
-git clone "$repo_url" Uni && cd Uni || { echo "Failed to navigate to repository directory"; exit 1; }
+git clone "$repo_url" Uni
 
 if [ -d "Uni" ]; then
     cd Uni || { echo "Failed to navigate to repository directory"; exit 1; }
@@ -67,6 +67,11 @@ else
 fi
 
 files=(*.cpp)
+if [ ${#files[@]} -eq 0 ]; then
+    echo "No C++ files found in the repository."
+    exit 1
+fi
+
 echo "C++ files in the repository:"
 for i in "${!files[@]}"; do
     echo "$i) ${files[$i]}"
