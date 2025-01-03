@@ -4,7 +4,8 @@ echo "############################################"
 echo "#       AmirHossein Karbalaie Rezaie       #"
 echo "############################################"
 
-check_gpp_installed() {
+check_gpp_installed() 
+{
     if ! command -v g++ &> /dev/null; then
         echo "g++ is not installed. Attempting to install MinGW..."
         if [ -x "$(command -v apt-get)" ]; then
@@ -34,7 +35,8 @@ check_gpp_installed() {
     fi
 }
 
-compile_and_run() {
+compile_and_run() 
+{
     if command -v g++ &> /dev/null; then
         g++ "$selected_file" -o output
     elif command -v x86_64-w64-mingw32-g++ &> /dev/null; then
@@ -55,7 +57,14 @@ compile_and_run() {
 check_gpp_installed
 
 repo_url="https://github.com/MrAmirRezaie/Uni.git"
-git clone "$repo_url" repo && cd repo || { echo "Failed to navigate to repository directory"; exit 1; }
+git clone "$repo_url" Uni && cd Uni || { echo "Failed to navigate to repository directory"; exit 1; }
+
+if [ -d "Uni" ]; then
+    cd Uni || { echo "Failed to navigate to repository directory"; exit 1; }
+else
+    echo "Directory 'Uni' does not exist."
+    exit 1
+fi
 
 files=(*.cpp)
 echo "C++ files in the repository:"
